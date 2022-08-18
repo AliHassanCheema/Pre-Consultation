@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import 'pre_consultation_detail/pre_consultation_detail_vu.dart';
+import 'pre_consultation_detail/pre_consultation_detail_landscape_vu.dart';
 import 'pre_consultation_vm.dart';
 
 class PreConsultationScreen

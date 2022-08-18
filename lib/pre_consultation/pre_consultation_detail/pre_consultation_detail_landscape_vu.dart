@@ -13,9 +13,10 @@ class PreConsultationDetailScreen
   @override
   Widget builder(BuildContext context, PreConsultationDetailViewModel viewModel,
       Widget? child) {
+    Orientation orientation = MediaQuery.of(context).orientation;
     return Scaffold(
       appBar: AppBar(
-          title: const Text('external_medication'),
+          title: const Text('External Medication'),
           automaticallyImplyLeading: true),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -53,7 +54,9 @@ class PreConsultationDetailScreen
                             ),
                           ),
                           child: SizedBox(
-                            height: MediaQuery.of(context).size.height / 6,
+                            height: orientation == Orientation.portrait
+                                ? MediaQuery.of(context).size.height / 12
+                                : MediaQuery.of(context).size.height / 6,
                             child: DropdownSearch<PreConsultationMedicine>(
                               dropdownDecoratorProps:
                                   const DropDownDecoratorProps(
@@ -112,7 +115,9 @@ class PreConsultationDetailScreen
                             ),
                           ),
                           child: SizedBox(
-                            height: MediaQuery.of(context).size.height / 6,
+                            height: orientation == Orientation.portrait
+                                ? MediaQuery.of(context).size.height / 12
+                                : MediaQuery.of(context).size.height / 6,
                             child: DropdownSearch<Frequency>(
                               dropdownDecoratorProps:
                                   const DropDownDecoratorProps(
@@ -138,7 +143,9 @@ class PreConsultationDetailScreen
                         ),
                         const SizedBox(height: 10),
                         SizedBox(
-                          height: MediaQuery.of(context).size.height / 6,
+                          height: orientation == Orientation.portrait
+                              ? MediaQuery.of(context).size.height / 12
+                              : MediaQuery.of(context).size.height / 6,
                           child: TextFormField(
                             maxLines: 1,
                             cursorColor:
@@ -177,7 +184,9 @@ class PreConsultationDetailScreen
                     child: Column(
                       children: [
                         SizedBox(
-                          height: MediaQuery.of(context).size.height / 6,
+                          height: orientation == Orientation.portrait
+                              ? MediaQuery.of(context).size.height / 12
+                              : MediaQuery.of(context).size.height / 6,
                           child: TextFormField(
                             maxLines: 1,
                             cursorColor:
@@ -232,7 +241,9 @@ class PreConsultationDetailScreen
                             ),
                           ),
                           child: SizedBox(
-                            height: MediaQuery.of(context).size.height / 6,
+                            height: orientation == Orientation.portrait
+                                ? MediaQuery.of(context).size.height / 12
+                                : MediaQuery.of(context).size.height / 6,
                             child: DropdownSearch<String>(
                               dropdownDecoratorProps:
                                   const DropDownDecoratorProps(
@@ -261,7 +272,9 @@ class PreConsultationDetailScreen
                             _showEndDatePicker(context, viewModel);
                           },
                           child: SizedBox(
-                            height: MediaQuery.of(context).size.height / 6,
+                            height: orientation == Orientation.portrait
+                                ? MediaQuery.of(context).size.height / 12
+                                : MediaQuery.of(context).size.height / 6,
                             child: TextFormField(
                               cursorColor:
                                   const Color.fromRGBO(0x38, 0x7b, 0x96, 1.0),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pre_consultation/pre_consultation_vu.dart';
+import 'pre_consultation/pre_consultation_landscape_vu.dart';
 
 void main() {
   runApp(const MyApp());
